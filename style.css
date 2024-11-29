@@ -1,0 +1,123 @@
+@font-face {
+  font-family: Jakarta;
+  src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+body {
+  background-color: pink;
+  font-family: Jakarta;
+
+  margin: 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+a {
+  color: pink;
+  font-weight: bold;
+  padding: 20px;
+}
+
+input {
+  margin: 10px;
+  padding: 10px;
+}
+
+.container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+}
+
+.content {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin-bottom: 5em;
+  box-shadow: 2px 0 5px black;
+
+}
+
+/* .top {
+  padding: 20px;
+  justify-content: space-between;
+  background-color: white; 
+}
+*/
+
+.login {
+  width: 100%;
+  text-align: center;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.login2 {
+  padding: 10px;
+  border-radius: 20px;
+  width: 500px;
+  background-color: white;
+  box-shadow: 5px 5px 2px black;
+}
+
+.home {
+  align-content: center;
+
+  word-spacing: 50px;
+}
+
+.aboutUs {
+  word-spacing: 0;
+}
+
+.menu {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.menu2 {
+  border-radius: 15px;
+  padding: 10px;
+  width: 500px;
+  background-color: white;
+
+}
+
+img {
+  width: 70px;
+  float: left;
+}
+
+.borrow {
+  border: 1px solid transparent;
+
+}
+
+h2 {
+  align-content: center;
+  padding: 0;
+}
+
+.borrow h2 {
+  width: max-content;
+}
+
+.borrow h2:hover{
+  cursor: pointer;
+
+  color: pink;
+}
+
+.bLogimg {
+  width: 60px;
+  padding-right: 10px;
+}
