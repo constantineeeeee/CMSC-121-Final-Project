@@ -13,17 +13,13 @@
   foreach($status as $row) {
     if($row["COUNT(*)"] == 1) {
       session_start();
-      header("location: menu.php");
+      header("location: admin-menu.php");
       echo "ACCOUNT FOUND";
     }
     else{
       session_start();
-      header("location: student-login.php");
+      header("location: admin-login.php");
       echo "WARAY ACCOUNT";
     }
-  }
-
-  function setCheck(){
-    
   }
 ?>

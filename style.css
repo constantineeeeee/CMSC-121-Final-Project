@@ -30,7 +30,8 @@ input {
 
 
 img {
-  min-width: 75px;
+  max-width: 75px;
+  height: auto;
 }
 
 h4 {
@@ -45,12 +46,11 @@ h2 {
 
 .borrow {
   border: 1px solid transparent;
-
 }
 
 
 .logo {
-  width: 150px;
+  max-width: 150px;
   float: right;
   clear: left;
 }
@@ -65,7 +65,7 @@ h2 {
 }
 
 .content {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   background-color: var(--maroon);
 
@@ -73,9 +73,6 @@ h2 {
 
   margin-bottom: 5em;
   box-shadow: 2px 0 5px black;
-
-  text-align: center;
-
 }
 .login {
   width: 100%;
@@ -126,11 +123,17 @@ h2 {
   color: black;
   padding: 0;
   margin: 10px;
+}
 
+.signupButton {
+  color: black;
+  margin: 0;
+  padding: 0;
 }
 
 .home {
-  padding-left: 33%;
+  text-align: right;
+  padding-left: 30%;
   align-content: center;
   word-spacing: 5px;
 }
@@ -156,12 +159,13 @@ h2 {
 
 .borrow h2 {
   width: max-content;
+  transition: 0.2s ease-in-out;
 }
 
 .borrow h2:hover{
   cursor: pointer;
 
-  color: pink;
+  color: maroon;
 }
 
 .bLogimg {
