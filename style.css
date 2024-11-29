@@ -1,10 +1,13 @@
+:root {
+  --maroon: #7B1113;
+}
+
 @font-face {
   font-family: Jakarta;
   src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
 }
 
 body {
-  background-color: pink;
   font-family: Jakarta;
 
   margin: 0;
@@ -15,7 +18,7 @@ h1 {
 }
 
 a {
-  color: pink;
+  color: white;
   font-weight: bold;
   padding: 20px;
 }
@@ -23,6 +26,33 @@ a {
 input {
   margin: 10px;
   padding: 10px;
+}
+
+
+img {
+  min-width: 75px;
+}
+
+h4 {
+  text-align: center;
+  vertical-align: middle;
+}
+
+h2 {
+  align-content: center;
+  padding: 0;
+}
+
+.borrow {
+  border: 1px solid transparent;
+
+}
+
+
+.logo {
+  width: 150px;
+  float: right;
+  clear: left;
 }
 
 .container {
@@ -37,20 +67,16 @@ input {
 .content {
   padding: 20px;
   display: flex;
-  justify-content: space-between;
-  background-color: white;
+  background-color: var(--maroon);
+
+  color: white;
+
   margin-bottom: 5em;
   box-shadow: 2px 0 5px black;
 
-}
+  text-align: center;
 
-/* .top {
-  padding: 20px;
-  justify-content: space-between;
-  background-color: white; 
 }
-*/
-
 .login {
   width: 100%;
   text-align: center;
@@ -63,14 +89,50 @@ input {
   padding: 10px;
   border-radius: 20px;
   width: 500px;
-  background-color: white;
+  background-color: rgb(236, 233, 233);
   box-shadow: 5px 5px 2px black;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.studentButton, .adminButton {
+  padding: 10px;
+
+  border-radius: 15px;
+  border: 1px solid black;
+
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.studentButton:hover, .adminButton:hover {
+  background-color: #7B1113;
+  color: white;
+}
+
+.studentButton img, .adminButton img {
+  width: 75px;
+}
+.studentButton h4, .adminButton h4 {
+  margin-top: 5px;
+}
+
+.loginButton {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 0;
+  margin: 10px;
+
 }
 
 .home {
+  padding-left: 33%;
   align-content: center;
-
-  word-spacing: 50px;
+  word-spacing: 5px;
 }
 
 .aboutUs {
@@ -88,23 +150,8 @@ input {
   border-radius: 15px;
   padding: 10px;
   width: 500px;
-  background-color: white;
+  background-color: rgb(221, 221, 221);
 
-}
-
-img {
-  width: 70px;
-  float: left;
-}
-
-.borrow {
-  border: 1px solid transparent;
-
-}
-
-h2 {
-  align-content: center;
-  padding: 0;
 }
 
 .borrow h2 {
