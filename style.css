@@ -22,6 +22,13 @@ body {
   margin: 0;
 }
 
+button {
+  display: flex;
+  justify-self: center;
+  border-radius: 15px;
+  padding: 15px;
+}
+
 h1 {
   font-size: 50px;
 }
@@ -46,6 +53,10 @@ img {
 h4 {
   text-align: center;
   vertical-align: middle;
+}
+
+h3 {
+  text-align: center;
 }
 
 h2 {
@@ -78,6 +89,7 @@ h2 {
   margin-bottom: 5em;
   box-shadow: 2px 0 5px black;
 }
+
 .login {
   width: 100%;
   text-align: center;
@@ -167,24 +179,57 @@ h2 {
   display: none;
   width: 500px;
   position: absolute;
+  padding: 10px;
+  border-radius: 15px;
 }
 
-.borrowItems form {
+.borrowItems {
   padding: 10px;
+  transition: 0.5s ease-in-out;
 }
 
 .show {
+  transition: 0.5s ease-in-out;
+
   display: block;
 }
 
-.show form label {
-  padding: 10px;
-  color: white;
+.show {
+  transition: 0.5s ease-in-out;
 }
 
+.show form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.show form table {
+  padding: 10px;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+
+.show form table tr td {
+  width: 33%;
+}
+
+
 .borrow {
-  border: 1px solid transparent;
+  border: 1px solid black;
   padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+.borrow:hover {
+  color: white;
+  background-color: var(--maroon);
 }
 
 
@@ -195,13 +240,6 @@ h2 {
 
 .borrow h2 {
   width: max-content;
-  transition: 0.2s ease-in-out;
-}
-
-.borrow h2:hover{
-  cursor: pointer;
-
-  color: maroon;
 }
 
 .bLogimg {
