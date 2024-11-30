@@ -1,13 +1,6 @@
 <?php
-   $db = new PDO("mysql:dbname=inventory;host=localhost", "121", "121");
-   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
- 
-   $username = $_POST["username"];
-   $password = $_POST["password"];
- 
-   $username = $db->quote($username);
-   $password = $db->quote($password);
- 
+   include("store-values.php");
+   
    $status = $db->query("SELECT COUNT(*) FROM student WHERE username = $username");
  
    foreach($status as $row) {
@@ -21,7 +14,6 @@
 
        session_start();
        header("location: student-login.php");
-       echo "WARAY ACCOUNT";
      }
    }
 

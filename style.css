@@ -7,9 +7,18 @@
   src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
 }
 
+@font-face {
+  font-family: Optima;
+  src: url(assets/fonts/optima-webfont/OPTIMA.woff);
+}
+
+@font-face {
+  font-family: Palatino;
+  src: url(assets/fonts/Palatino/Palatino\ LT\ Black.woff);
+}
+
 body {
   font-family: Jakarta;
-
   margin: 0;
 }
 
@@ -43,11 +52,6 @@ h2 {
   align-content: center;
   padding: 0;
 }
-
-.borrow {
-  border: 1px solid transparent;
-}
-
 
 .logo {
   max-width: 150px;
@@ -154,7 +158,39 @@ h2 {
   padding: 10px;
   width: 500px;
   background-color: rgb(221, 221, 221);
+  box-shadow: 5px 5px 2px black;
 
+}
+
+.borrowItems {
+  background-color: var(--maroon);
+  display: none;
+  width: 500px;
+  position: absolute;
+}
+
+.borrowItems form {
+  padding: 10px;
+}
+
+.show {
+  display: block;
+}
+
+.show form label {
+  padding: 10px;
+  color: white;
+}
+
+.borrow {
+  border: 1px solid transparent;
+  padding: 20px;
+}
+
+
+.borrow img {
+
+  float: left;
 }
 
 .borrow h2 {

@@ -5,7 +5,7 @@
       <div class="login2">
         <h2>LOGIN</h2>
         
-        <form action="student-login-check.php" method="post">
+        <form action="student-menu.php" method="post">
             <label>Username <input type="text" name="username"> </label> <br/>
             <label>Password <input type="password" name="password"></label> <br/>
             <input type="submit" value="Login">
