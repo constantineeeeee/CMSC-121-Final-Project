@@ -1,6 +1,6 @@
 <?php
   include("db-connect.php");
-  include("user-values");
+  include("user-values.php  ");
   
   $status = $db->query("SELECT COUNT(*), username FROM admin WHERE username = $username AND password = $password");
 

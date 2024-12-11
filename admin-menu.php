@@ -1,6 +1,8 @@
 <?php
   include("top.html");
 ?>
+  <div id="logout" hidden>LOGOUT</div>
+  <div id="hrefLink" hidden>index.php</div>
 
   <div class="menu">
     <div class="menu2">

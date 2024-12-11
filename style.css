@@ -171,7 +171,6 @@ h2 {
   width: 500px;
   background-color: rgb(221, 221, 221);
   box-shadow: 5px 5px 2px black;
-
 }
 
 .borrowItems {
@@ -181,21 +180,78 @@ h2 {
   position: absolute;
   padding: 10px;
   border-radius: 15px;
+  box-shadow: 5px 5px 2px black;
+}
+
+.btn {
+  border-radius: 15px;
+  font-weight: bold;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+  width: 50%;
+  margin: 10px;
+  text-align: center;
+}
+
+button {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to top right, var(--maroon), #5e0f2d);
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes anim {
+  0% {width: 0;}
+  100% {width: 500px;}
 }
 
 .borrowItems {
+  animation: anim 0.5s;
   padding: 10px;
-  transition: 0.5s ease-in-out;
+}
+
+.showSlip {
+  text-align: center;
+  background-color: var(--maroon);
+  display: none;
+  width: 500px;
+  position: absolute;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 2px black;
+  color: white;
+}
+
+.showSlip h2 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+}
+
+.showSlip table {
+  padding: 5px;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.showSlip table tr td {
+  width: 50%;
+}
+
+.editClose {
+  display: flex;
+  justify-content: center;
 }
 
 .show {
-  transition: 0.5s ease-in-out;
-
-  display: block;
-}
-
-.show {
-  transition: 0.5s ease-in-out;
+  animation: anim 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .show form {
@@ -206,15 +262,18 @@ h2 {
 }
 
 .show form table {
-  padding: 10px;
+  padding: 5px;
   color: white;
   text-align: center;
   width: 100%;
 }
 
-
 .show form table tr td {
   width: 33%;
+}
+
+.show form table tr {
+  border-bottom: 5px solid white;  
 }
 
 
@@ -231,7 +290,6 @@ h2 {
   color: white;
   background-color: var(--maroon);
 }
-
 
 .borrow img {
 

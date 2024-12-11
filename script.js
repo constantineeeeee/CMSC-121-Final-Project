@@ -9,11 +9,13 @@ var hrefLinkEl = document.getElementById("hrefLink");
 
 window.onload = setLogout;
 
-function show(){
-  borrowItemsEl.classList.toggle("show");
+function show(className){
+  var el = document.getElementById(className);
+
+  el.classList.toggle("show");
 }
 
-function setCurrentTime(){
+function setCurrentDate(){
   const date = new Date();
   var month = date.getMonth() + 1;
   var day = date.getDate();
