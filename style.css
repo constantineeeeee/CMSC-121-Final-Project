@@ -304,3 +304,33 @@ button {
   width: 60px;
   padding-right: 10px;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+.status {
+  font-weight: bold;
+}
+.status-confirmed { color: green; }
+.status-pending { color: orange; }
+.status-rejected { color: red; }
+h1 {
+  text-align: center;
+  color: #333;
+}
+.summary {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
