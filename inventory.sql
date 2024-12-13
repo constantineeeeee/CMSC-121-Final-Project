@@ -67,7 +67,6 @@ CREATE TABLE `borrow` (
 
 LOCK TABLES `borrow` WRITE;
 /*!40000 ALTER TABLE `borrow` DISABLE KEYS */;
-INSERT INTO `borrow` VALUES (4,3,4,'2024-12-14 0:57:44','Pending'),(1,1,2,'2024-12-14 1:15:55','Pending'),(1,2,2,'2024-12-14 1:32:41','Pending');
 /*!40000 ALTER TABLE `borrow` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,7 +91,7 @@ CREATE TABLE `item` (
 
 LOCK TABLES `item` WRITE;
 /*!40000 ALTER TABLE `item` DISABLE KEYS */;
-INSERT INTO `item` VALUES (1,'Beaker',48),(2,'Graduated Cylinder',48),(3,'Meter Stick',50),(4,'Scale',50);
+INSERT INTO `item` VALUES (1,'Beaker',46),(2,'Graduated Cylinder',48),(3,'Meter Stick',50),(4,'Scale',50);
 /*!40000 ALTER TABLE `item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,6 +106,7 @@ CREATE TABLE `returned` (
   `SID` int(11) NOT NULL,
   `IID` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
+  `date` varchar(255) NOT NULL,
   KEY `SID` (`SID`),
   KEY `IID` (`IID`),
   CONSTRAINT `returned_ibfk_1` FOREIGN KEY (`SID`) REFERENCES `student` (`ID`),
@@ -120,7 +120,7 @@ CREATE TABLE `returned` (
 
 LOCK TABLES `returned` WRITE;
 /*!40000 ALTER TABLE `returned` DISABLE KEYS */;
-INSERT INTO `returned` VALUES (1,4,2),(1,1,1),(1,4,5),(1,3,3);
+INSERT INTO `returned` VALUES (1,1,2,'2024-12-14 1:15:55');
 /*!40000 ALTER TABLE `returned` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,7 +148,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('lopiniano','12345','Louie Constantine','Opiniano',1),('tanny1','12345678','Tanny','Tanny',4);
+INSERT INTO `student` VALUES ('lopiniano','12345','Louie Constantine','Opiniano',1);
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -161,4 +161,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-14  1:40:04
+-- Dump completed on 2024-12-14  2:02:57

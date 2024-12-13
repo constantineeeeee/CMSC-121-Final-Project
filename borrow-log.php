@@ -61,10 +61,9 @@ function getStatusColor($status) {
 <?php
   include("top.html");
 ?>
-<a href="admin-menu.php">&a</a>
   <div id="logout" hidden>LOGOUT</div>
   <div id="hrefLink" hidden>index.php</div>
-
+  <a class="backButton" href="admin-menu.php">&#9664;</a>
   <h1>Borrowed Items Details</h1>
 
 <div class="summary">

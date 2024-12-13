@@ -84,6 +84,9 @@ $borrowRecords = getBorrowRecords($db);
 
 </head>
 <body>
+
+    <a class="backButton" href="admin-menu.php">&#9664;</a>
+
     <h1>Borrow Records</h1>
     <table class="borrowSlip">
         <tr>
@@ -98,9 +101,7 @@ $borrowRecords = getBorrowRecords($db);
         </tr>
         <?php foreach ($borrowRecords as $record): ?>
         <tr>
-            <!-- <td><?php echo htmlspecialchars($record['SID']); ?></td> -->
-            <td><?php echo htmlspecialchars($record['firstname'] . ' ' . $record['lastname']); ?></td>
-            <!-- <td><?php echo htmlspecialchars($record['IID']); ?></td> -->
+            <td><?= $record['firstname'] . ' ' . $record['lastname']; ?></td>
             <td><?=$record['itemName'] ?></td>
             <td><?=$record['quantity'] ?></td>
             <td><?=$record['date'] ?></td>
