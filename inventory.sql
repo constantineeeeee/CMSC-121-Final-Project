@@ -82,7 +82,7 @@ CREATE TABLE `item` (
   `itemName` varchar(255) NOT NULL,
   `quantity` int(11) DEFAULT NULL CHECK (`quantity` >= 0),
   PRIMARY KEY (`itemID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -91,7 +91,7 @@ CREATE TABLE `item` (
 
 LOCK TABLES `item` WRITE;
 /*!40000 ALTER TABLE `item` DISABLE KEYS */;
-INSERT INTO `item` VALUES (1,'Beaker',46),(2,'Graduated Cylinder',48),(3,'Meter Stick',50),(4,'Scale',50);
+INSERT INTO `item` VALUES (1,'Beaker',46),(2,'Graduated Cylinder',48),(3,'Meter Stick',50),(4,'Scale',50),(5,'Microscope',50),(6,'Thermometer',50),(7,'Tongs',50),(8,'Spring Balance',50),(9,'Funnel',50),(10,'Magnet',50),(11,'Hot Plate',50),(12,'Test Tube',50);
 /*!40000 ALTER TABLE `item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -161,4 +161,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-14  2:02:57
+-- Dump completed on 2024-12-14  2:12:03
