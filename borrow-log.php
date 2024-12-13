@@ -61,6 +61,7 @@ function getStatusColor($status) {
 <?php
   include("top.html");
 ?>
+<a href="admin-menu.php">&a</a>
   <div id="logout" hidden>LOGOUT</div>
   <div id="hrefLink" hidden>index.php</div>
 
@@ -90,10 +91,10 @@ function getStatusColor($status) {
     ?>
     <h3>Borrow Summary</h3>
     <p>
-        Total Borrow Requests: <?php echo $totalBorrows; ?><br>
-        Confirmed Borrows: <?php echo $statusCounts['Confirmed']; ?><br>
-        Pending Borrows: <?php echo $statusCounts['Pending']; ?><br>
-        Rejected Borrows: <?php echo $statusCounts['Rejected']; ?>
+        Total Borrow Requests: <?= $totalBorrows; ?><br>
+        Confirmed Borrows: <?= $statusCounts['Confirmed']; ?><br>
+        Pending Borrows: <?= $statusCounts['Pending']; ?><br>
+        Rejected Borrows: <?= $statusCounts['Rejected']; ?>
     </p>
     
     <h3>Item Quantities Borrowed</h3>
@@ -108,9 +109,8 @@ function getStatusColor($status) {
     <thead>
         <tr>
             <th>Student ID</th>
-            <th>Student Name</th>
-            <th>Item ID</th>
-            <th>Item Name</th>
+            <th>Student</th>
+            <th>Item</th>
             <th>Quantity</th>
             <th>Borrow Date</th>
             <th>Status</th>
@@ -119,14 +119,13 @@ function getStatusColor($status) {
     <tbody>
         <?php foreach ($borrowedItems as $item): ?>
         <tr>
-            <td><?php echo htmlspecialchars($item['SID']); ?></td>
-            <td><?php echo htmlspecialchars($item['firstname'] . ' ' . $item['lastname']); ?></td>
-            <td><?php echo htmlspecialchars($item['IID']); ?></td>
-            <td><?php echo htmlspecialchars($item['itemName']); ?></td>
-            <td><?php echo htmlspecialchars($item['quantity']); ?></td>
-            <td><?php echo htmlspecialchars($item['date'] ?: 'N/A'); ?></td>
+            <td><?=$item['SID'] ?></td>
+            <td><?=$item['firstname'] . ' ' . $item['lastname'] ?></td>
+            <td><?=$item['itemName'] ?></td>
+            <td><?=$item['quantity'] ?></td>
+            <td><?=$item['date'] ?: 'N/A' ?></td>
             <td class="status status-<?php echo strtolower($item['status']); ?>">
-                <?php echo htmlspecialchars($item['status']); ?>
+                <?=$item['status'] ?>
             </td>
         </tr>
         <?php endforeach; ?>

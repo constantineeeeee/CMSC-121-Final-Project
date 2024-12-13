@@ -6,9 +6,11 @@
 
   $items = $db->query("SELECT * FROM item");
 
-  $borrow = $db->query("SELECT firstname, itemName, borrow.quantity, date, status FROM student JOIN borrow ON student.ID=borrow.SID JOIN item ON borrow.IID=item.itemID WHERE ID = $SID");
-
-
+  $borrow = $db->query("SELECT SID, IID, firstname, itemName, borrow.quantity, date, status 
+                        FROM student 
+                        JOIN borrow ON student.ID=borrow.SID 
+                        JOIN item ON borrow.IID=item.itemID 
+                        WHERE ID = $SID");
 ?>
   <div id="logout" hidden>LOGOUT</div>
   <div id="hrefLink" hidden>index.php</div>
@@ -17,6 +19,7 @@
   <div class="menu">
 
     <div class="borrowItems" id="borrowItems">
+      <h2>BORROW ITEMS</h2>
       <form action="borrow-handle.php" method="post">
         <table >
           <tr>
@@ -41,18 +44,21 @@
         </table>
 
         <input type="text" name="date" id="setDate" hidden >
-        <input type="submit" onclick="setCurrentDate()" value="Request Items" class="btn">
+        <input type="submit" onclick="setCurrentDate()" value="Request Items" class="reqBtn">
       </form>
-      <button onclick="show('borrowItems')" class="btn">Close</button>
+      <button onclick="show('borrowItems')" class="reqBtn">Close</button>
     </div>
     
     <div class="showSlip" id="showSlip">
       <h2>BORROW SLIP</h2>
-      <h3>Status: <?php foreach($borrow as $b) { ?> <?=$b["status"] ?> <?php break; } ?></h3>
+      <!-- <h3>Status:  ?></h3> -->
       <table>
         <tr>
           <th>Item</th>
           <th>Quantity</th>
+          <th class="dBorrowDisplay">Date Borrowed</th>
+          <th>Status</th>
+          <th>Option</th>
         </tr>
         <?php
           foreach($borrow as $borrowItem){ ?>
@@ -63,11 +69,31 @@
               <td>
                 <?= $borrowItem["quantity"]?>
               </td>
+              <td>
+                <?=$borrowItem["date"] ?>
+              </td>
+              <td>
+                <?=$borrowItem["status"] ?>
+              </td>
+              <td>
+              <form action="return-handle.php" method="POST">
+                <input type="hidden" name="IID" value="<?= $borrowItem["IID"] ?>" hidden>
+                <input type="hidden" name="SID" value="<?= $borrowItem["SID"] ?>" hidden>
+                <input type="hidden" name="quantity" value="<?= $borrowItem["quantity"] ?>" hidden>
+                <input type="hidden" name="date" value="<?= $borrowItem["date"] ?>" hidden>
+                <?php
+                  if($borrowItem["status"] == "Confirmed") {
+                ?>
+                  <input class="reqBtn" type="submit" name="return" value="Return Item(s)">
+                <?php  } else { ?>
+                  <input class="reqBtn" type="submit" name="cancel" value="Cancel">
+                <?php } ?>
+              </form>
+              </td>
             </tr>
         <?php }?>
       </table>
       <div class="editClose">
-        <button class="btn">Edit</button>
         <button class="btn" onclick="show('showSlip')">Close</button>
       </div>
     </div>

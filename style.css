@@ -29,7 +29,8 @@ button {
   padding: 15px;
 }
 
-h1 {
+.content h1 {
+  color: white;
   font-size: 50px;
 }
 
@@ -175,15 +176,23 @@ h2 {
 
 .borrowItems {
   background-color: var(--maroon);
+  text-align: center;
+  color: white;
   display: none;
-  width: 500px;
+  width: 800px;
   position: absolute;
   padding: 10px;
   border-radius: 15px;
   box-shadow: 5px 5px 2px black;
 }
 
-.btn {
+.borrowItems form{
+  display: flex;
+  justify-content: center;
+}
+
+.btn {  
+  color: #7B1113;
   border-radius: 15px;
   font-weight: bold;
   background-color: white;
@@ -191,6 +200,23 @@ h2 {
   width: 50%;
   margin: 10px;
   text-align: center;
+  cursor: pointer;
+}
+
+.reqBtn {
+  display: flex;
+  justify-self: center;
+  color: #7B1113;
+  border-radius: 15px;
+  font-weight: bold;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 20px;
 }
 
 button {
@@ -198,7 +224,8 @@ button {
   vertical-align: middle;
 }
 
-.btn:hover {
+
+.btn:hover, .reqBtn:hover {
   background-image: linear-gradient(to top right, var(--maroon), #5e0f2d);
   color: white;
   cursor: pointer;
@@ -206,19 +233,25 @@ button {
 
 @keyframes anim {
   0% {width: 0;}
-  100% {width: 500px;}
+  100% {width: 800px;}
 }
 
 .borrowItems {
-  animation: anim 0.5s;
+  animation: anim 1s ease-in-out;
   padding: 10px;
+}
+
+tr td {
+    white-space:nowrap;
+    max-width:50%;
+    word-break:break-all;
 }
 
 .showSlip {
   text-align: center;
   background-color: var(--maroon);
   display: none;
-  width: 500px;
+  width: 800px;
   position: absolute;
   padding: 10px;
   border-radius: 15px;
@@ -226,7 +259,7 @@ button {
   color: white;
 }
 
-.showSlip h2 {
+.showSlip h2, .borrowItems h2 {
   padding-bottom: 20px;
   border-bottom: 1px solid white;
 }
@@ -236,6 +269,10 @@ button {
   color: white;
   text-align: center;
   width: 100%;
+}
+
+.showSlip table tr th, .borrowItems table tr th {
+  color: #7B1113;
 }
 
 .showSlip table tr td {
@@ -324,6 +361,7 @@ th {
 .status-confirmed { color: green; }
 .status-pending { color: orange; }
 .status-rejected { color: red; }
+
 h1 {
   text-align: center;
   color: #333;
