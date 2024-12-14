@@ -43,8 +43,25 @@ a {
 input {
   margin: 10px;
   padding: 10px;
+
 }
 
+input[type=submit]{
+  color: white;
+  background-color: var(--maroon);
+  width: 200px;
+  border-radius: 20px;
+
+}
+
+input[type=submit]:hover{
+  opacity: 0.8;
+}
+
+input[type=text], input[type=password ]{
+  background-color: rgb(252, 234, 234);
+  border-radius: 10px;  
+}
 
 img {
   max-width: 75px;
@@ -68,10 +85,10 @@ h2 {
 .backButton {
   padding: 20px;
   border-radius: 50%;
-  top: 5%;
-  right: 5%;
+  top: 120pt;
+  right: 5pt;
   position: absolute;
-  color: white;
+  color:  maroon;
   text-decoration: none;
   font-size: 25px;
   width: 25px;
@@ -80,7 +97,7 @@ h2 {
 }
 
 .backButton:hover {
-  color: #333;
+  opacity: 0.6;
 }
 
 .logo {
@@ -102,10 +119,8 @@ h2 {
   padding: 10px;
   display: flex;
   background-color: var(--maroon);
-
   color: white;
-
-  margin-bottom: 5em;
+  margin-bottom: 3em;
   box-shadow: 2px 0 5px black;
 }
 
@@ -118,16 +133,23 @@ h2 {
 }
 
 .login2 {
-  padding: 10px;
+  padding: 0px 10px 10px 10px;
   border-radius: 20px;
   width: 500px;
-  background-color: rgb(236, 233, 233);
-  box-shadow: 5px 5px 2px black;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.login2 h2{
+  background-color: maroon;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .studentButton, .adminButton {
@@ -182,14 +204,15 @@ h2 {
   width: 100%;
   display: flex;
   justify-content: center;
+  
 }
 
 .menu2 {
   border-radius: 15px;
-  padding: 10px;
+  padding: 20px;
   width: 500px;
-  background-color: rgb(221, 221, 221);
-  box-shadow: 5px 5px 2px black;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .borrowItems {
@@ -333,12 +356,13 @@ tr td {
 
 
 .borrow {
+  color: black;
   border: 1px solid black;
   padding: 20px;
-  margin: 10px;
   border-radius: 10px;
   transition: 0.2s linear;
   cursor: pointer;
+  
 }
 
 .borrow:hover {
@@ -347,8 +371,8 @@ tr td {
 }
 
 .borrow img {
-
   float: left;
+  margin-right: 10px;
 }
 
 .borrow h2 {
@@ -362,7 +386,10 @@ tr td {
 
 table {
     border-collapse: collapse;
-    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    margin: 10px;
+    
 }
 th, td {
     border: 1px solid #ddd;
@@ -389,4 +416,13 @@ h1 {
   padding: 10px;
   background-color: #f9f9f9;
   border-radius: 5px;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #aaa;
 }

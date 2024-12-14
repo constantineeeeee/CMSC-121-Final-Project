@@ -5,7 +5,7 @@
     <div id="hrefLink" hidden>index.php</div>
   
   <div class="menu">
-    <class="menu2">
+    <div class="menu2">
     <a href="borrow-slip.php" >
       <div class="borrow">
         <img src="assets/images/borrowslip.png" alt="" class="bLogimg">
@@ -20,12 +20,19 @@
     </a>
       <a href="check-inventory.php" >
       <div class="borrow">
-        <img src="assets/images/borrowLog.png" alt="">
+        <img src="assets/images/checkinv.png" alt="">
         <h2>Check Inventory</h2>
       </div>
     </a>
+    <a href="return-log.php" >
+      <div class="borrow">
+        <img src="assets/images/returned.png" alt="">
+        <h2>Returned Items</h2>
+      </div>
+    </a>
+    </div>
   </div>
-</div>
+
   
 <?php 
   include("bottom.html");  

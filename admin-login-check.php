@@ -19,7 +19,7 @@
       header("location: admin-menu.php"); 
     }
     else{
-      header("location: student-login.php");
+      header("location: admin-login.php");
     }
   }
 ?>

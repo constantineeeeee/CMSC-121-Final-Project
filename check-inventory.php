@@ -35,6 +35,7 @@ $conn->close();
 ?>
   <div id="logout" hidden>LOGOUT</div>
   <div id="hrefLink" hidden>index.php</div>
+  <a class="backButton" href="admin-menu.php">&#9664;</a>
 
   <h1>Available Inventory</h1>
     
