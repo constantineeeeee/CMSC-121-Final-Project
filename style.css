@@ -38,6 +38,7 @@ a {
   color: white;
   font-weight: bold;
   padding: 20px;
+  text-decoration: none;
 }
 
 input {
@@ -46,16 +47,15 @@ input {
 
 }
 
-input[type=submit]{
+.admBtn {
   color: white;
   background-color: var(--maroon);
   width: 200px;
   border-radius: 20px;
-
 }
-
-input[type=submit]:hover{
+.admBtn:hover {
   opacity: 0.8;
+
 }
 
 input[type=text], input[type=password ]{
@@ -282,6 +282,7 @@ button {
   padding: 10px;
 }
 
+
 tr td {
     white-space:nowrap;
     max-width:50%;
@@ -359,6 +360,7 @@ tr td {
   color: black;
   border: 1px solid black;
   padding: 20px;
+  margin: 10px;
   border-radius: 10px;
   transition: 0.2s linear;
   cursor: pointer;
@@ -425,4 +427,11 @@ h1 {
   transform: translateY(-50%);
   font-size: 18px;
   color: #aaa;
+}
+
+
+.borrowItems form table{
+  width: 95%;
+  padding: 10px;
+  margin: 20px;
 }

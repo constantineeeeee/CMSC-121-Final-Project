@@ -115,7 +115,7 @@ $borrowRecords = getBorrowRecords($db);
                         <option value="Pending" <?= $record['status'] == 'Pending' ? 'selected' : '' ?>>Pending</option>
                         <option value="Confirmed" <?= $record['status'] == 'Confirmed' ? 'selected' : '' ?>>Confirmed</option>
                     </select>
-                    <input type="submit" name="update_status" value="Update">
+                    <input class="admBtn" type="submit" name="update_status" value="Update">
                 </form>
             </td>
         </tr>

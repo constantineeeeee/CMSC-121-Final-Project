@@ -21,7 +21,7 @@
     <div class="borrowItems" id="borrowItems">
       <h2>BORROW ITEMS</h2>
       <form action="borrow-handle.php" method="post">
-        <table >
+        <table class="borrowTable" >
           <tr>
             <th>Item</th>
             <th>Stock</th>

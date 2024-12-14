@@ -22,6 +22,7 @@
 
   if(isset($_POST["return"])){
     $return_init = $db->exec("INSERT INTO returned(SID, IID, quantity, date) VALUES($SID, $IID, $quantity, $date)"); 
+    $update_inv = $db->exec("UPDATE item SET quantity = quantity + $quantity WHERE itemID = $IID"); 
     $del = $db->exec("DELETE FROM borrow WHERE SID = $SID AND IID = $IID AND date = $date"); 
   }
   else if(isset($_POST["cancel"])){
