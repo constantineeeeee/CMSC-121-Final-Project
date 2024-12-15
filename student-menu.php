@@ -1,20 +1,27 @@
 <?php
   include("top.html");
   include("db-connect.php");
-  include("get-user-details.php");
+  // include("get-user-details.php");
 
+  session_start();
 
+  $id = (int)$_SESSION["id"];
   $items = $db->query("SELECT * FROM item");
 
   $borrow = $db->query("SELECT SID, IID, firstname, itemName, borrow.quantity, date, status 
                         FROM student 
                         JOIN borrow ON student.ID=borrow.SID 
                         JOIN item ON borrow.IID=item.itemID 
-                        WHERE ID = $SID");
+                        WHERE ID = $id");
+
+  if(!isset($_SESSION["firstName"])){
+    header("Location: index.php");
+    session_destroy();
+  }
 ?>
   <div id="logout" hidden>LOGOUT</div>
-  <div id="hrefLink" hidden>index.php</div>
-  <h3 onload="showLogout()">Hello, <?= $firstname ?>! </h3>
+  <div id="hrefLink" hidden>logout.php</div>
+  <h3 onload="showLogout()">Hello, <?= $_SESSION["firstName"] ?>! </h3>
   
   <div class="menu">
 
@@ -108,10 +115,6 @@
         <img src="assets/images/receipt.png" alt="" class="bLogimg">
         <h2>Check Slip/Return Items</h2>
       </div>
-      <!-- <div class="borrow" id="borrow">
-        <img src="assets/images/list.png" alt="" class="bLogimg">
-        <h2>Check Inventory</h2>
-      </div> -->
     </div>
   </div>
 <?php

@@ -429,9 +429,12 @@ h1 {
   color: #aaa;
 }
 
-
 .borrowItems form table{
   width: 95%;
   padding: 10px;
   margin: 20px;
+}
+
+.incorrect {
+  color: red;
 }

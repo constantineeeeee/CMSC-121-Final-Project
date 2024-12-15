@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 // Database connection configuration
 $servername = "localhost";
 $username = "121";  // Replace with your database username
@@ -58,8 +61,14 @@ function getStatusColor($status) {
 }
 ?>
 
+
 <?php
   include("top.html");
+  if(!isset($_SESSION["username"])){
+    header("Location: index.php");
+    session_destroy();
+  }
+
 ?>
   <div id="logout" hidden>LOGOUT</div>
   <div id="hrefLink" hidden>index.php</div>

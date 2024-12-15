@@ -4,7 +4,7 @@
     <div class="login">
       <div class="login2">
         <!-- <h2>WELCOME TO GEN LAB BORROWING SERVICES</h2> -->
-        <a href="student-login.php" class="loginButton" id="studentButton" onclick="setVal('ADMIN')">
+        <a href="student-login.php" class="loginButton" id="studentButton">
           <div class="studentButton">
             <img src="assets/images/studentIcon.png" alt="">
             <h4>
@@ -13,8 +13,7 @@
           </div>
         </a>
 
-        <a href="admin-login.php" class="loginButton" id="adminButton" onclick="setVal('STUDENT')">
-
+        <a href="admin-login.php" class="loginButton" id="adminButton">
           <div class="adminButton">
             <img src="assets/images/adminIcon.png" alt="">
             <h4>Admin</h4>

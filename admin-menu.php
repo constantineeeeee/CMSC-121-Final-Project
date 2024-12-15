@@ -1,8 +1,15 @@
 <?php
   include("top.html");
+
+  session_start();
+
+  if(!isset($_SESSION["username"])){
+    header("Location: index.php");
+    session_destroy();
+  }
 ?>
     <div id="logout" hidden>LOGOUT</div>
-    <div id="hrefLink" hidden>index.php</div>
+    <div id="hrefLink" hidden>logout.php</div>
   
   <div class="menu">
     <div class="menu2">

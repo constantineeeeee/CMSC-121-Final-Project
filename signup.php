@@ -7,6 +7,14 @@
   <div class="login">
       <div class="login2">
         <h2>SIGNUP</h2>
+
+        <?php 
+          session_start();
+          if(isset($_SESSION["signupFail"])) {
+        ?>
+          <p class="incorrect">username is already taken</p>
+        <?php session_destroy(); } ?>
+
         <form action="student-signup-check.php" method="post">
             <label>First Name <input type="text" name="firstname" required></label> <br/>
             <label>Last Name <input type="text" name="lastname" required></label> <br/>

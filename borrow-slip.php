@@ -108,9 +108,9 @@ $borrowRecords = getBorrowRecords($db);
             <td><?=$record['status'] ?></td>
             <td>
                 <form method="POST" action="">
-                    <input type="hidden" name="sid" value="<?php echo $record['SID']; ?>" hidden>
-                    <input type="hidden" name="iid" value="<?php echo $record['IID']; ?>" hidden>
-                    <input type="hidden" name="date" value="<?php echo $record['date']; ?>" hidden>
+                    <input type="hidden" name="sid" value="<?= $record['SID']; ?>" hidden>
+                    <input type="hidden" name="iid" value="<?= $record['IID']; ?>" hidden>
+                    <input type="hidden" name="date" value="<?= $record['date']; ?>" hidden>
                     <select name="status">
                         <option value="Pending" <?= $record['status'] == 'Pending' ? 'selected' : '' ?>>Pending</option>
                         <option value="Confirmed" <?= $record['status'] == 'Confirmed' ? 'selected' : '' ?>>Confirmed</option>

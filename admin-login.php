@@ -7,6 +7,14 @@
   <div class="login">
     <div class="login2">
       <h2>ADMIN LOGIN</h2>
+      
+      <?php 
+        session_start();
+        if(isset($_SESSION["failed"])) { 
+      ?>
+        <p class="incorrect">Incorrect username or password</p>
+      <?php session_destroy(); } ?>
+
       <form action="admin-login-check.php" method="post">
           <label>Username: <input type="text" name="username" required> </label> <br/>
           <label>Password: <input type="password" name="password" required></label> <br/>

@@ -11,14 +11,16 @@
  
    foreach($status as $row) {
      if($row["COUNT(*)"] == 1) {
-       session_start();
-       header("location: signup.php");
-       echo "username is already taken";
+      session_start();
+      header("location: signup.php");
+      session_start();
+      $_SESSION["signupFail"] = true;
      }
      else{
       $insert = $db->exec("INSERT INTO student(username, password, firstname, lastname) VALUES($username, $password, $firstname, $lastname)");
-
       header("location: student-login.php");
+      session_start();
+      $_SESSION["signupSuccess"] = true;
      }
    }
 

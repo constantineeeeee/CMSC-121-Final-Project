@@ -5,5 +5,4 @@
 
   $username = $db->quote($username);
   $password = $db->quote($password);
-
 ?>
