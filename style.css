@@ -102,8 +102,9 @@ h2 {
 
 .logo {
   max-width: 150px;
-  float: right;
-  clear: left;
+  width: 100%;
+  height: auto;
+  float: left;
 }
 
 .container {
@@ -444,6 +445,10 @@ span{
 }
 
 #redirectHome {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
   cursor: default;
   padding: 0;
 }
