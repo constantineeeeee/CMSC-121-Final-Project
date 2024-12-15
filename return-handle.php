@@ -1,5 +1,12 @@
 <?php
+  session_start();
   include("db-connect.php");
+  
+  if(!isset($_SESSION["userCheck"])){
+    header("Location: index.php");
+    session_destroy();
+  }
+  
    
   $IID = $_POST["IID"];
   $SID = $_POST["SID"];

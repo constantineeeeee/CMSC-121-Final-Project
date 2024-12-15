@@ -6,6 +6,8 @@ var borrowEl = document.getElementById("borrow");
 var displayUserEl = document.getElementById("displayUser");
 var logoutEl = document.getElementById("logout");
 var hrefLinkEl = document.getElementById("hrefLink");
+var homeLinkEl = document.getElementById("homeLink");
+var redirectHomeEl = document.getElementById("redirectHome");
 
 window.onload = setLogout;
 
@@ -27,4 +29,8 @@ function setLogout(){
   displayUserEl.setAttribute('href', hrefLinkEl.innerHTML);
   displayUserEl.removeAttribute('hidden');
   displayUserEl.innerHTML = logoutEl.innerHTML;
+}
+
+function setHome(){
+  redirectHomeEl.setAttribute('href', homeLinkEl.innerHTML);
 }

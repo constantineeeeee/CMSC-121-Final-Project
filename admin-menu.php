@@ -1,15 +1,17 @@
 <?php
+  session_start();
+  
   include("top.html");
 
-  session_start();
 
-  if(!isset($_SESSION["username"])){
+  if(!isset($_SESSION["adminUserCheck"])){
     header("Location: index.php");
     session_destroy();
   }
 ?>
     <div id="logout" hidden>LOGOUT</div>
     <div id="hrefLink" hidden>logout.php</div>
+    <div id="homeLink" hidden>admin-menu.php</div>
   
   <div class="menu">
     <div class="menu2">

@@ -1,9 +1,8 @@
 <?php
+  session_start();
+
   include("top.html");
   include("db-connect.php");
-  // include("get-user-details.php");
-
-  session_start();
 
   $id = (int)$_SESSION["id"];
   $items = $db->query("SELECT * FROM item");
@@ -14,13 +13,15 @@
                         JOIN item ON borrow.IID=item.itemID 
                         WHERE ID = $id");
 
-  if(!isset($_SESSION["firstName"])){
+  if(!isset($_SESSION["userCheck"])){
     header("Location: index.php");
     session_destroy();
   }
 ?>
   <div id="logout" hidden>LOGOUT</div>
   <div id="hrefLink" hidden>logout.php</div>
+  <div id="homeLink" hidden>student-menu.php</div>
+
   <h3 onload="showLogout()">Hello, <?= $_SESSION["firstName"] ?>! </h3>
   
   <div class="menu">

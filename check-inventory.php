@@ -1,4 +1,5 @@
 <?php
+session_start();
 // inventory.php
 // Database connection details
 $servername = "localhost";
@@ -32,9 +33,16 @@ $conn->close();
 
 <?php
   include("top.html");
+  if(!isset($_SESSION["adminUserCheck"])){
+    header("Location: index.php");
+    session_destroy();
+  }
+
 ?>
   <div id="logout" hidden>LOGOUT</div>
   <div id="hrefLink" hidden>index.php</div>
+  <div id="homeLink" hidden>admin-menu.php</div>
+  
   <a class="backButton" href="admin-menu.php">&#9664;</a>
 
   <h1>Available Inventory</h1>

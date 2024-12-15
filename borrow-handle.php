@@ -1,5 +1,11 @@
 <?php
   session_start();
+
+  if(!isset($_SESSION["userCheck"])){
+    header("Location: index.php");
+    session_destroy();
+  }
+
   include("db-connect.php");
 
   $item_check = $db->query("SELECT * FROM item");

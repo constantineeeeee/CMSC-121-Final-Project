@@ -10,6 +10,7 @@
       header("location: admin-menu.php"); 
       session_start();
       $_SESSION["username"] = $row["username"];
+      $_SESSION["adminUserCheck"] = true;
       // $user_details = array(
       //   "username"=>$username,
       //   "password"=>$password,

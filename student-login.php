@@ -3,6 +3,8 @@
 ?>
   <div id="logout" hidden>ADMIN LOGIN</div>
   <div id="hrefLink" hidden>admin-login.php</div>
+  <div id="homeLink" hidden>index.php</div>
+
   <div class="login">
       <div class="login2">
         <h2>STUDENT LOGIN</h2>

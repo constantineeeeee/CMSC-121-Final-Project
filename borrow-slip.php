@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Database connection configuration
 $servername = "localhost";
 $username = "121";  // Replace with your database username
@@ -78,9 +79,16 @@ $borrowRecords = getBorrowRecords($db);
 ?>
 <?php
   include("top.html");
+
+  if(!isset($_SESSION["adminUserCheck"])){
+    header("Location: index.php");
+    session_destroy();
+  }
+
 ?>
   <div id="logout" hidden>LOGOUT</div>
   <div id="hrefLink" hidden>index.php</div>
+  <div id="homeLink" hidden>admin-menu.php</div>
 
 </head>
 <body>

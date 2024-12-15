@@ -438,3 +438,12 @@ h1 {
 .incorrect {
   color: red;
 }
+
+span{
+  cursor: pointer;
+}
+
+#redirectHome {
+  cursor: default;
+  padding: 0;
+}

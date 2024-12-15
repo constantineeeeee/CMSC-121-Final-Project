@@ -13,6 +13,7 @@
       $_SESSION["username"] = $row["username"];
       $_SESSION["firstName"] = $row["firstname"];
       $_SESSION["id"] = $row["ID"];
+      $_SESSION["userCheck"] = true;
       // $_SESSION["passed"] = true;
       
       // $user_details = array(
