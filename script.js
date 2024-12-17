@@ -8,6 +8,8 @@ var logoutEl = document.getElementById("logout");
 var hrefLinkEl = document.getElementById("hrefLink");
 var homeLinkEl = document.getElementById("homeLink");
 var redirectHomeEl = document.getElementById("redirectHome");
+var bgImgEl = document.getElementById("bgImg");
+var bodyEl = document.getElementById("body");
 
 window.onload = setLogout;
 
@@ -29,6 +31,8 @@ function setLogout(){
   displayUserEl.setAttribute('href', hrefLinkEl.innerHTML);
   displayUserEl.removeAttribute('hidden');
   displayUserEl.innerHTML = logoutEl.innerHTML;
+  bodyEl.style.backgroundImage = bgImgEl.innerHTML;
+
 }
 
 function setHome(){

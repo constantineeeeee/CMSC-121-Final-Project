@@ -89,6 +89,7 @@ $borrowRecords = getBorrowRecords($db);
   <div id="logout" hidden>LOGOUT</div>
   <div id="hrefLink" hidden>logout.php</div>
   <div id="homeLink" hidden>admin-menu.php</div>
+  <div id="bgImg" hidden>none</div>
 
 </head>
 <body>

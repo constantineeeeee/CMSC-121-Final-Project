@@ -21,6 +21,7 @@
   <div id="logout" hidden>LOGOUT</div>
   <div id="hrefLink" hidden>logout.php</div>
   <div id="homeLink" hidden>student-menu.php</div>
+  <div id="bgImg" hidden>none</div>
 
   <h3 onload="showLogout()">Hello, <?= $_SESSION["firstName"] ?>! </h3>
   

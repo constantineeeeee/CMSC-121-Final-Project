@@ -19,7 +19,7 @@
       <form action="admin-login-check.php" method="post">
           <label>Username: <input type="text" name="username" required> </label> <br/>
           <label>Password: <input type="password" name="password" required></label> <br/>
-          <input type="submit" value="Login">
+          <input class="reqBtn" type="submit" value="Login">
       </form>
     </div>
   </div>

@@ -55,6 +55,7 @@ $returnedItems = getReturnedItemsDetails($conn);
   <div id="logout" hidden>LOGOUT</div>
   <div id="hrefLink" hidden>logout.php</div>
   <div id="homeLink" hidden>admin-menu.php</div>
+  <div id="bgImg" hidden>none</div>
 
   <a class="backButton" href="admin-menu.php">&#9664;</a>
   <h1>Return Log</h1>

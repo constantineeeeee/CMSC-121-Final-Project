@@ -1,6 +1,8 @@
 <?php
   include("top.html");
 ?>
+  <div id="bgImg" hidden>assets/images/bg-img.jpg</div>
+
     <div class="login">
       <div class="login2">
         <!-- <h2>WELCOME TO GEN LAB BORROWING SERVICES</h2> -->

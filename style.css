@@ -20,6 +20,9 @@
 body {
   font-family: Jakarta;
   margin: 0;
+  background-image: url(assets/images/bg-img.jpg);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
 }
 
 button {
