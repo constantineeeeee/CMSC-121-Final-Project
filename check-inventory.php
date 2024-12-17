@@ -1,10 +1,8 @@
 <?php
 session_start();
-// inventory.php
-// Database connection details
 $servername = "localhost";
-$username = "121";  // Replace with your database username
-$password = "121";  // Replace with your database password
+$username = "root";  
+$password = "";  
 $dbname = "inventory";
 
 // Create connection
@@ -16,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // Query to get available items
-$sql = "SELECT itemName, quantity FROM item WHERE quantity > 0";
+$sql = "SELECT itemName, quantity FROM item WHERE quantity > 0 ORDER BY itemName";
 $result = $conn->query($sql);
 
 // Store items in an array

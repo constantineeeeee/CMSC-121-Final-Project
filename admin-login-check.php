@@ -11,15 +11,6 @@
       session_start();
       $_SESSION["username"] = $row["username"];
       $_SESSION["adminUserCheck"] = true;
-      // $user_details = array(
-      //   "username"=>$username,
-      //   "password"=>$password,
-      //   "firstname"=>$row["firstname"]
-      // );
-      // $json_string = json_encode($user_details);
-      // $file_handle = fopen("userDetails.json", "w");
-      // fwrite($file_handle, $json_string);
-      // fclose($file_handle);
     }
     else{
       header("location: admin-login.php");

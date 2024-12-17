@@ -2,17 +2,10 @@
 session_start();
 // Database connection configuration
 $servername = "localhost";
-$username = "121";  // Replace with your database username
-$password = "121";  // Replace with your database password
+$username = "root"; 
+$password = "";  
 $dbname = "inventory";
 include("db-connect.php");
-// Create connection
-// $conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
 
 // Function to fetch all borrow records
 function getBorrowRecords($db) {
@@ -24,12 +17,6 @@ function getBorrowRecords($db) {
 
     $result = $db->query($sql);
     
-    // $borrowRecords = [];
-    // if ($result != 0) {
-    //     while($row = $result->fetch_assoc()) {
-    //         $borrowRecords[] = $row;
-    //     }
-    // }
     return $result;
 }
 
@@ -48,14 +35,6 @@ function updateBorrowStatus($db, $sid, $iid, $date, $newStatus) {
     catch (Exception $e){
         return false;
     }
-    // $stmt = $conn->prepare($sql);
-    // $stmt->bind_param("sii", $newStatus, $sid, $iid, $date);
-    
-    // if ($stmt->execute()) {
-    //     return true;
-    // } else {
-    //     return false;
-    // }
 }
 
 // Handle status update if form is submitted
@@ -93,13 +72,10 @@ $borrowRecords = getBorrowRecords($db);
 
 </head>
 <body>
-
-    <a class="backButton" href="admin-menu.php">&#9664;</a>
-
     <h1>Borrow Records</h1>
     <table class="borrowSlip">
         <tr>
-            <!-- <th>Student ID</th> -->
+            <th>Student ID</th>
             <th>Student</th>
             <!-- <th>Item ID</th> -->
             <th>Item</th>
@@ -110,6 +86,7 @@ $borrowRecords = getBorrowRecords($db);
         </tr>
         <?php foreach ($borrowRecords as $record): ?>
         <tr>
+            <td><?=$record['SID'] ?></td>
             <td><?= $record['firstname'] . ' ' . $record['lastname']; ?></td>
             <td><?=$record['itemName'] ?></td>
             <td><?=$record['quantity'] ?></td>
@@ -132,8 +109,6 @@ $borrowRecords = getBorrowRecords($db);
     </table>
 
 <?php
-// Close the database connection
-// $db->close();
 ?>
 <?php 
   include("bottom.html");  

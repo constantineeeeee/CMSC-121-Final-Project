@@ -5,13 +5,13 @@
   include("db-connect.php");
 
   $id = (int)$_SESSION["id"];
-  $items = $db->query("SELECT * FROM item");
+  $items = $db->query("SELECT * FROM item ORDER BY itemName");
 
   $borrow = $db->query("SELECT SID, IID, firstname, itemName, borrow.quantity, date, status 
                         FROM student 
                         JOIN borrow ON student.ID=borrow.SID 
                         JOIN item ON borrow.IID=item.itemID 
-                        WHERE ID = $id");
+                        WHERE ID = $id ORDER BY date");
 
   if(!isset($_SESSION["userCheck"])){
     header("Location: index.php");

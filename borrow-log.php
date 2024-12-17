@@ -4,8 +4,8 @@ session_start();
 
 // Database connection configuration
 $servername = "localhost";
-$username = "121";  // Replace with your database username
-$password = "121";  // Replace with your database password
+$username = "root";  
+$password = "";  
 $dbname = "inventory";
 
 // Create connection
@@ -74,8 +74,9 @@ function getStatusColor($status) {
   <div id="hrefLink" hidden>logout.php</div>
   <div id="homeLink" hidden>admin-menu.php</div>
   <div id="bgImg" hidden>none</div>
-
+  
   <a class="backButton" href="admin-menu.php">&#9664;</a>
+
   <h1>Borrowed Items Details</h1>
 
 <div class="summary">

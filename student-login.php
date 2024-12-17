@@ -1,6 +1,7 @@
 <?php
   include("top.html");
 ?>
+  
   <div id="logout" hidden>ADMIN LOGIN</div>
   <div id="hrefLink" hidden>admin-login.php</div>
   <div id="homeLink" hidden>index.php</div>
@@ -11,6 +12,11 @@
 
         <?php 
           session_start();
+
+          if(isset($_SESSION["userCheck"])){
+            header("Location: student-menu.php");
+          }
+
           if(isset($_SESSION["failed"])) { 
         ?>
           <p class="incorrect">Incorrect username or password</p>

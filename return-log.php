@@ -2,8 +2,8 @@
 session_start();
 // Database connection configuration
 $servername = "localhost";
-$username = "121";  // Replace with your database username
-$password = "121";  // Replace with your database password
+$username = "root";  
+$password = "";  
 $dbname = "inventory";
 
 // Create connection

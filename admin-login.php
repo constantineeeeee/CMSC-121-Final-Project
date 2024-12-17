@@ -11,6 +11,11 @@
       
       <?php 
         session_start();
+
+        if(isset($_SESSION["adminUserCheck"])){
+          header("Location: admin-menu.php");
+        }
+
         if(isset($_SESSION["failed"])) { 
       ?>
         <p class="incorrect">Incorrect username or password</p>

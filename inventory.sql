@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES ('admin','admin');
+INSERT INTO `admin` VALUES ('admin','admin'),('uptacloban','uptacloban');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -67,6 +67,7 @@ CREATE TABLE `borrow` (
 
 LOCK TABLES `borrow` WRITE;
 /*!40000 ALTER TABLE `borrow` DISABLE KEYS */;
+INSERT INTO `borrow` VALUES (1,1,5,'2024-12-16 7:54:7','Confirmed'),(1,2,4,'2024-12-16 7:54:7','Confirmed'),(1,10,2,'2024-12-16 7:54:7','Pending'),(11,1,1,'2024-12-16 8:0:11','Pending'),(1,1,3,'2024-12-17 14:15:8','Pending');
 /*!40000 ALTER TABLE `borrow` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -91,7 +92,7 @@ CREATE TABLE `item` (
 
 LOCK TABLES `item` WRITE;
 /*!40000 ALTER TABLE `item` DISABLE KEYS */;
-INSERT INTO `item` VALUES (1,'Beaker',46),(2,'Graduated Cylinder',48),(3,'Meter Stick',50),(4,'Scale',50),(5,'Microscope',50),(6,'Thermometer',50),(7,'Tongs',50),(8,'Spring Balance',50),(9,'Funnel',50),(10,'Magnet',50),(11,'Hot Plate',50),(12,'Test Tube',50);
+INSERT INTO `item` VALUES (1,'Beaker',38),(2,'Graduated Cylinder',44),(3,'Meter Stick',49),(4,'Scale',50),(5,'Microscope',50),(6,'Thermometer',46),(7,'Tongs',52),(8,'Spring Balance',50),(9,'Funnel',50),(10,'Magnet',48),(11,'Hot Plate',50),(12,'Test Tube',49);
 /*!40000 ALTER TABLE `item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,7 +121,7 @@ CREATE TABLE `returned` (
 
 LOCK TABLES `returned` WRITE;
 /*!40000 ALTER TABLE `returned` DISABLE KEYS */;
-INSERT INTO `returned` VALUES (1,1,2,'2024-12-14 1:15:55');
+INSERT INTO `returned` VALUES (10,11,5,'2024-12-15 22:33:2'),(1,1,1,'2024-12-15 22:20:30'),(12,5,1,'2024-12-17 15:41:30'),(12,7,1,'2024-12-17 15:41:30'),(13,1,5,'2024-12-17 15:58:16');
 /*!40000 ALTER TABLE `returned` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -139,7 +140,7 @@ CREATE TABLE `student` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -148,7 +149,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('lopiniano','12345','Louie Constantine','Opiniano',1);
+INSERT INTO `student` VALUES ('lopiniano','12345','Louie Constantine','Opiniano',1),('loi','1','Louie Constantine','Opiniano',10),('kravenb','12345678','Richard Kraven','Biscante',11),('202253148','12345','Dynise','Lira',12),('beasantiago','beahehe','Bea','Santiago',13);
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -161,4 +162,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-14  2:12:03
+-- Dump completed on 2024-12-17 16:10:32
